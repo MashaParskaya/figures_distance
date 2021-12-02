@@ -23,11 +23,8 @@ def not_line(dots):
         lines.append([dots[i].x - dots[i+1].x, dots[i].y - dots[i+1].y])
     cnt = 0
     for i in range(len(lines) - 1):
-        print(lines[i][0], lines[i][1], lines[i+1][0], lines[i+1][1])
-        print(lines[i][0] * lines[i+1][1], lines[i+1][0] * lines[i][1])
         if (lines[i][0] * lines[i+1][1] == lines[i+1][0] * lines[i][1]):
             cnt += 1
-        print(cnt)
     return (cnt != len(lines) - 1)
 
 
