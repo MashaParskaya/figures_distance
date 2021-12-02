@@ -15,7 +15,7 @@ def get_data(filename):
                 data.append(geometry.Dot(x, y))
             except ValueError:
                 fin.close()
-                error += 10
+                error += 1
             if error:
                 raise Exception("Sorry. Wrong format of input data. Each line must contain two float values.")
         fin.close()
